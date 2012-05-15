@@ -1,4 +1,5 @@
-change-bootstrap
+# Change Bootstrap
+## A Bash script to automatically set up a Change.org developer workstation
 ================
 
-Contains a bootstrap.sh to automatically set up a Change.org workstation
+    bash <(curl -s https://github.com/brokenladder/change-bootstrap/blob/master/bootstrap.sh)
