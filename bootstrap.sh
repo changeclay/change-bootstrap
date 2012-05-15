@@ -13,7 +13,7 @@ read -p $'\nYour ssh public key has been printed above and copied to the clipboa
 
 # Chef the machine
 git clone git@github.com:changeclay/soloist.git /tmp/soloist
-cd /tmp/bootstrap-chef-ops
+cd /tmp/soloist
 git submodule update --init
 echo -e "\nAbout to install the Bundler gem, which requires root privileges (meaning you may be asked for your password)\n"
 sudo gem install bundler --no-ri --no-rdoc
