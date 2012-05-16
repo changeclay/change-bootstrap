@@ -17,10 +17,13 @@ cd /tmp/soloist
 git submodule update --init
 echo -e "\nAbout to install the Bundler gem, which requires root privileges (meaning you may be asked for your password)\n"
 sudo gem install bundler -v1.1.3 --no-ri --no-rdoc
-bundle
+bundle install --path vendor/bundle --binstubs
 
 echo -e "\nAbout to run Soloist, which requires root privileges (meaning you may be asked for your password)\n"
 bin/soloist
 
 # return to directory from which you started
 cd -
+
+# cleanup
+rm -rf /tmp/soloist
