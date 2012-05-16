@@ -1,5 +1,7 @@
 read -p $'\nInstall Command Line Tools for Xcode (requires Apple sign-in at https://developer.apple.com/downloads/index.action) and press enter to continue.'
 
+read -p $'\nInstall Java, for Soloist to run (http://support.apple.com/downloads/DL1421/en_US/JavaForMacOSX10.7.dmg) and press enter to continue.'
+
 # setup your ssh keys for github
 if ! [ -e "$HOME/.ssh/id_rsa.pub" ]
 then
