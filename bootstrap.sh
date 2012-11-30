@@ -14,11 +14,12 @@ cat ~/.ssh/id_rsa.pub | pbcopy
 read -p $'\nYour ssh public key has been printed above and copied to the clipboard for convenience. Add it to your Github account at https://github.com/account/ssh and press enter to continue.'
 
 # Chef the machine
-git clone git@github.com:changeclay/soloist.git /tmp/soloist
+git clone git@github.com:changeclay/soloist.git /tmp/soloist || {
+  echo "failed to clone soloist repository - did you add your ssh key to Github?"; exit 1; }
 cd /tmp/soloist
 git submodule update --init
 echo -e "\nAbout to install the Bundler gem, which requires root privileges (you may be asked for your password)\n"
-sudo gem install bundler -v1.1.3 --no-ri --no-rdoc
+sudo gem install bundler -v1.2.2 --no-ri --no-rdoc
 bundle install --path vendor/bundle --binstubs
 
 echo -e "\nRunning Soloist, which requires root privileges (you may be asked for your password)\n"
